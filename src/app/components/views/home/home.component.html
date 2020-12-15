@@ -1,0 +1,47 @@
+<br><br><br><br>
+<div class="cards">
+    <div class="card-item-form">
+        <h3 class="card-item-title">Nova transação</h3>
+        <form [formGroup]="formTransaction" (ngSubmit)="onSubmit()">
+            <label for="type">Tipo de transação</label>
+            <select id="type" formControlName="type">
+                <option value="compra">Compra</option>
+                <option value="venda">Venda</option>
+            </select><br><br>
+            <label for="merchandise">Nome da mercadoria</label>
+            <input type="text" formControlName="merchandise" id="merchandise" placeholder="Input"><br><br>
+            <label for="price">Valor</label>
+            <input type="text" formControlName="price" id="price" placeholder="R$ 0,00"><br><br>
+            <input class="btnTransaction" type="submit" value="Adicionar transação">
+        </form>
+    </div>
+    <div class="card-item-list">
+        <h3 class="card-item-title">Extrato de transações</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th style="text-align: left" scope="col" colspan="2">Mercadoria</th>
+                    <th scope="col"></th>
+                    <th style="text-align: end;" scope="col">Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let transaction of transactions">
+                    <td><span *ngIf="transaction.type === 'venda'">+</span> <span
+                            *ngIf="transaction.type === 'compra'">-</span>
+                        {{ transaction.merchandise }}
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style="text-align: end;">{{ transaction.price }}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total</td>
+                    <td style="text-align: end;">R$ {{ total }} [Lucro]</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>

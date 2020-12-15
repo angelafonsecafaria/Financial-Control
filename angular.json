@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "transacoes"
+    }
+  },
+  "defaultProject": "transacoes",
+  "cli": {
+    "analytics": "5c4a80ac-5caf-40c8-b86a-29808e0949c6"
+  }
 }

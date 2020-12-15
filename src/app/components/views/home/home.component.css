@@ -1,0 +1,72 @@
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.card-item-form {
+  border-radius: 5px;
+  border: 1px solid #959595;
+  padding: 20px;
+}
+
+.card-item-list {
+  padding: 20px;
+}
+
+.btnTransaction {
+  display: block;
+  width: 100%;
+  background-color: #333333;
+  padding: 14px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card-item-title {
+  text-align: center;
+  font-size: 18px;
+}
+
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  border-bottom: 1px solid #cecfd5;
+  padding: 10px 15px;
+}
+th {
+  font-weight: bold;
+}
+tfoot tr:last-child td {
+  border-bottom: 0;
+}
+
+@media (min-width: 600px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
